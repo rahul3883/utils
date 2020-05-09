@@ -68,7 +68,7 @@ will be considered here.
 ```javascript
 utils.prettyJsonC(obj[, options]);
 ```
-- [`options`](https://github.com/rahul3883/utils#print-a-line)
+- [`options`](#print-a-line)
 
 ## Samples
 
