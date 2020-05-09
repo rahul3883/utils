@@ -61,7 +61,7 @@ utils.prettyJson(obj);
 #### Log with lines using JSON method
 Log an object with lines wrapped around.
 
-This function uses the `utils.log` and `utils.line` function internally.
+This function uses the `utils.prettyJson` and `utils.line` function internally.
 
 Except `lineChar` and `lineLength`, None of the options passed in `utils.configure`
 will be considered here.
