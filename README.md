@@ -46,7 +46,7 @@ Log an object with lines wrapped around.
 
 This function uses the `utils.line` function internally.
 ```javascript
-utils.logC(obj, options);
+utils.logC(obj[, options]);
 ```
 - [`options`](https://github.com/rahul3883/utils#print-a-line)
 
@@ -66,7 +66,7 @@ This function uses the `utils.log` and `utils.line` function internally.
 Except `lineChar` and `lineLength`, None of the options passed in `utils.configure`
 will be considered here.
 ```javascript
-utils.prettyJsonC(obj, options);
+utils.prettyJsonC(obj[, options]);
 ```
 - [`options`](https://github.com/rahul3883/utils#print-a-line)
 
