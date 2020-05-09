@@ -1,4 +1,4 @@
-var utils = require('../');
+var utils = require('@rahul171/utils');
 
 utils.configure({
     showHidden: true,
