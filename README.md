@@ -48,7 +48,7 @@ This function uses the `utils.line` function internally.
 ```javascript
 utils.logC(obj[, options]);
 ```
-- [`options`](https://github.com/rahul3883/utils#print-a-line)
+- [`options`](#print-a-line)
 
 #### Log using JSON method
 This function uses `JSON.stringify` internally rather than the built in `util` module.
