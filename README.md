@@ -29,7 +29,7 @@ Create a line using the character provided.
 ```javascript
 utils.getLine([options]);
 ```
-- `options`: `<Array>` These options override the same options provided in [`utils.configure(option)`](#configure)
+- `options`: `<Array>` These options override the same options provided in [`utils.configure`](#configure)
     - `char`: `<char>` Default: `-`
     - `len`: `<integer>` Default: `67`
 
@@ -70,7 +70,7 @@ Format the object using the built in [`JSON.stringify`](https://developer.mozill
 ```javascript
 utils.getJsonString(obj[, options]);
 ```
-- `options`: `<Array>` These options override the same options provided in `utils.configure(option)`
+- `options`: `<Array>` These options override the same options provided in [`utils.configure`](#configure)
     - `replacer`: `<function>` A map function for object properties
     - `indent`: `<integer> | <string>` A string or number used to add whitespace in the returned string
     - `removeQuotes`: `<boolean>` Remove quotes from the keys
