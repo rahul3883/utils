@@ -16,6 +16,7 @@ const utils = require('@rahul171/utils');
 ```
 
 ### Configure
+Configure the global options.
 ```javascript
 utils.configure([options]);
 ```
@@ -41,7 +42,7 @@ utils.line([options]);
 - [options](#get-a-line)
 
 ### Get a string
-Format the object using the built in [`util.inspect`](https://nodejs.org/api/util.html#util_util_inspect_object_options) method
+Format the object using the built in [`util.inspect`](https://nodejs.org/api/util.html#util_util_inspect_object_options) method.
 ```javascript
 utils.getString(obj[, option]);
 ```
@@ -49,16 +50,16 @@ utils.getString(obj[, option]);
 (override options of the built in `util.inspect` method)
     
 ### Log
-Print a string returned from [`utils.getString`](#get-a-string)
+Print a string returned from [`utils.getString`](#get-a-string).
 ```javascript
 utils.log(obj[, options]);
 ```
 - [options](#get-a-string)
 
 ### Log with lines
-Wrap [`utils.log`](#log) with lines
+Wrap [`utils.log`](#log) with lines.
 
-[`utils.line`](#print-a-line) is used to print the lines
+[`utils.line`](#print-a-line) is used to print the lines.
 ```javascript
 utils.logC(obj[, options]);
 ```
@@ -66,7 +67,7 @@ utils.logC(obj[, options]);
 - [options (2)](#get-a-string)
 
 ### Get a JSON string
-Format the object using the built in [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) method
+Format the object using the built in [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) method.
 ```javascript
 utils.getJsonString(obj[, options]);
 ```
@@ -84,9 +85,9 @@ utils.json(obj);
 - [options](#get-a-json-string)
 
 ### Log with lines using JSON method
-Wrap [`utils.json`](#log-using-json-method) with lines
+Wrap [`utils.json`](#log-using-json-method) with lines.
 
-[`utils.line`](#print-a-line) is used to print the lines
+[`utils.line`](#print-a-line) is used to print the lines.
 ```javascript
 utils.jsonC(obj[, options]);
 ```
