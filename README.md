@@ -56,7 +56,8 @@ utils.log(obj[, options]);
 - [options](#get-a-string)
 
 ### Log with lines
-Wrap [`utils.log`](#log) with lines  
+Wrap [`utils.log`](#log) with lines
+
 [`utils.line`](#print-a-line) is used to print the lines
 ```javascript
 utils.logC(obj[, options]);
@@ -70,10 +71,10 @@ Format the object using the built in [`JSON.stringify`](https://developer.mozill
 utils.getJsonString(obj[, options]);
 ```
 - `options`: `<Array>` These options override the same options provided in [`utils.configure`](#configure)
-    - `replacer`: `<function>` A map function for object properties
-    - `indent`: `<integer> | <string>` A string or number used to add whitespace in the returned string. Default 
-    - `removeQuotes`: `<boolean>` Remove quotes from the keys
-    - `singleLineArray`: `<boolean>` Print an array in a single line
+    - `replacer`: `<function>` A map function for object properties. [**Default**](https://github.com/rahul3883/utils/blob/master/index.js#L12)
+    - `indent`: `<integer> | <string>` A string or number used to add whitespace in the returned string. **Default**:`4`
+    - `removeQuotes`: `<boolean>` Remove quotes from the keys. **Default**:`true`
+    - `singleLineArray`: `<boolean>` Print an array in a single line. **Default**:`true`
 
 ### Log using JSON method
 Print a string returned from [`utils.getJsonString`](#get-a-json-string).
