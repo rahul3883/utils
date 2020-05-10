@@ -80,7 +80,7 @@ utils.getJsonString(obj[, options]);
 ### Log using JSON method
 Print a string returned from [`utils.getJsonString`](#get-a-json-string).
 ```javascript
-utils.json(obj);
+utils.json(obj[, options]);
 ```
 - [options](#get-a-json-string)
 
