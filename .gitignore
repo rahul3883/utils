@@ -21,6 +21,7 @@
 .history/*
 
 # misc
+.editorconfig
 package-lock.json
 npm-debug.log
 
