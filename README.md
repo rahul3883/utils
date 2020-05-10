@@ -29,7 +29,7 @@ Create a line using the character provided.
 ```javascript
 utils.getLine([options]);
 ```
-- `options`: `<Array>` These options override the same options provided in `utils.configure(option)`
+- `options`: `<Array>` These options override the same options provided in [`utils.configure(option)`](#configure)
     - `char`: `<char>` Default: `-`
     - `len`: `<integer>` Default: `67`
 
