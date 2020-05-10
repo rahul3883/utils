@@ -30,8 +30,8 @@ Create a line using the character provided.
 utils.getLine([options]);
 ```
 - `options`: `<Array>` These options override the same options provided in [`utils.configure`](#configure)
-    - `char`: `<char>` Default: `-`
-    - `len`: `<integer>` Default: `67`
+    - `char`: `<char>` A character to use for printing the line. ***Default***: `-`
+    - `len`: `<integer>` Length of the line. ***Default***: `67`
 
 ### Print a line
 Print a line returned from [`utils.getLine`](#get-a-line).
