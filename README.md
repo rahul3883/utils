@@ -10,12 +10,12 @@ npm install @rahul171/utils
 
 ## Usage
 
-#### Load the package
+### Load the package
 ```javascript
 const utils = require('@rahul171/utils');
 ```
 
-#### Configure
+### Configure
 ```javascript
 utils.configure([options]);
 ```
@@ -24,7 +24,7 @@ utils.configure([options]);
 - [options (3)](#get-a-string)
 
 
-#### Get a line
+### Get a line
 Create a line using the character provided.
 ```javascript
 utils.getLine([options]);
@@ -33,14 +33,14 @@ utils.getLine([options]);
     - `char`: `<char>` Default: `-`
     - `len`: `<integer>` Default: `67`
 
-#### Print a line
+### Print a line
 Print a line returned from [`utils.getLine`](#get-a-line).
 ```javascript
 utils.line([options]);
 ```
 - [options](#get-a-line)
 
-#### Get a string
+### Get a string
 Format the object using the built in [`util.inspect`](https://nodejs.org/api/util.html#util_util_inspect_object_options) method
 ```javascript
 utils.getString(obj[, option]);
@@ -48,14 +48,14 @@ utils.getString(obj[, option]);
 - [options](https://nodejs.org/api/util.html#util_util_inspect_object_options)
 (override options of the built in `util.inspect` method)
     
-#### Log
+### Log
 Print a string returned from [`utils.getString`](#get-a-string)
 ```javascript
 utils.log(obj[, options]);
 ```
 - [options](#get-a-string)
 
-#### Log with lines
+### Log with lines
 Wrap [`utils.log`](#log) with lines
 
 [`utils.line`](#print-a-line) is used to print the lines
@@ -65,7 +65,7 @@ utils.logC(obj[, options]);
 - [options (1)](#print-a-line)
 - [options (2)](#get-a-string)
 
-#### Get a JSON string
+### Get a JSON string
 Format the object using the built in [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) method
 ```javascript
 utils.getJsonString(obj[, options]);
@@ -76,14 +76,14 @@ utils.getJsonString(obj[, options]);
     - `removeQuotes`: `<boolean>` Remove quotes from the keys
     - `singleLineArray`: `<boolean>` Print an array in a single line
 
-#### Log using JSON method
+### Log using JSON method
 Print a string returned from [`utils.getJsonString`](#get-a-json-string).
 ```javascript
 utils.json(obj);
 ```
 - [options](#get-a-json-string)
 
-#### Log with lines using JSON method
+### Log with lines using JSON method
 Wrap [`utils.json`](#log-using-json-method) with lines
 
 [`utils.line`](#print-a-line) is used to print the lines
