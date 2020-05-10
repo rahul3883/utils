@@ -56,8 +56,7 @@ utils.log(obj[, options]);
 - [options](#get-a-string)
 
 ### Log with lines
-Wrap [`utils.log`](#log) with lines
-
+Wrap [`utils.log`](#log) with lines  
 [`utils.line`](#print-a-line) is used to print the lines
 ```javascript
 utils.logC(obj[, options]);
@@ -72,7 +71,7 @@ utils.getJsonString(obj[, options]);
 ```
 - `options`: `<Array>` These options override the same options provided in [`utils.configure`](#configure)
     - `replacer`: `<function>` A map function for object properties
-    - `indent`: `<integer> | <string>` A string or number used to add whitespace in the returned string
+    - `indent`: `<integer> | <string>` A string or number used to add whitespace in the returned string. Default 
     - `removeQuotes`: `<boolean>` Remove quotes from the keys
     - `singleLineArray`: `<boolean>` Print an array in a single line
 
