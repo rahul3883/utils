@@ -19,56 +19,79 @@ const utils = require('@rahul171/utils');
 ```javascript
 utils.configure([options]);
 ```
-- `options`: `<Array>`
-    - `showHidden`: `<boolean>` Default: `false`
-    - `colors`: `<boolean>` Default: `false`
-    - `depth`: `<integer>` Default: `null`
-    - `compact`: `<boolean> | <integer>` Default: `3`
-    - `breakLength`: `<integer>` Default: `67`
-    - `lineChar`: `<char>` Default: `-`
-    - `lineLength`: `<integer>` Default: `67`
+- [options (1)](#get-a-line)
+- [options (2)](#get-a-json-string)
+- [options (3)](#get-a-string)
+
+
+#### Get a line
+Create a line using the character provided.
+```javascript
+utils.getLine([options]);
+```
+- `options`: `<Array>` These options override the same options provided in `utils.configure(option)`
+    - `char`: `<char>` Default: `-`
+    - `len`: `<integer>` Default: `67`
 
 #### Print a line
+Print a line returned from [`utils.getLine`](#get-a-line).
 ```javascript
 utils.line([options]);
 ```
-- `options`: `<Array>` These options override some option in provided `utils.configure(option)`
-    - `char`: `<char>` Overrides: `lineChar`
-    - `len`: `<integer>` Overrides: `lineLength`
+- [options](#get-a-line)
+
+#### Get a string
+Format the object using the built in [`util.inspect`](https://nodejs.org/api/util.html#util_util_inspect_object_options) method
+```javascript
+utils.getString(obj[, option]);
+```
+- [options](https://nodejs.org/api/util.html#util_util_inspect_object_options)
+(override options of the built in `util.inspect` method)
     
 #### Log
+Print a string returned from [`utils.getString`](#get-a-string)
 ```javascript
-utils.log(obj);
+utils.log(obj[, options]);
 ```
+- [options](#get-a-string)
 
 #### Log with lines
-Log an object with lines wrapped around.
+Wrap [`utils.log`](#log) with lines
 
-This function uses the `utils.line` function internally.
+[`utils.line`](#print-a-line) is used to print the lines
 ```javascript
 utils.logC(obj[, options]);
 ```
-- [`options`](#print-a-line)
+- [options (1)](#print-a-line)
+- [options (2)](#get-a-string)
+
+#### Get a JSON string
+Format the object using the built in [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) method
+```javascript
+utils.getJsonString(obj[, options]);
+```
+- `options`: `<Array>` These options override the same options provided in `utils.configure(option)`
+    - `replacer`: `<function>` A map function for object properties
+    - `indent`: `<integer> | <string>` A string or number used to add whitespace in the returned string
+    - `removeQuotes`: `<boolean>` Remove quotes from the keys
+    - `singleLineArray`: `<boolean>` Print an array in a single line
 
 #### Log using JSON method
-This function uses `JSON.stringify` internally rather than the built in `util` module.
-
-So, none of the options passed in `utils.configure` will be considered here.
+Print a string returned from [`utils.getJsonString`](#get-a-json-string).
 ```javascript
-utils.prettyJson(obj);
+utils.json(obj);
 ```
+- [options](#get-a-json-string)
 
 #### Log with lines using JSON method
-Log an object with lines wrapped around.
+Wrap [`utils.json`](#log-using-json-method) with lines
 
-This function uses the `utils.prettyJson` and `utils.line` function internally.
-
-Except `lineChar` and `lineLength`, None of the options passed in `utils.configure`
-will be considered here.
+[`utils.line`](#print-a-line) is used to print the lines
 ```javascript
-utils.prettyJsonC(obj[, options]);
+utils.jsonC(obj[, options]);
 ```
-- [`options`](#print-a-line)
+- [options (1)](#print-a-line)
+- [options (2)](#get-a-json-string)
 
 ## Samples
 
@@ -76,7 +99,7 @@ Sample files can be found in [`/samples`](https://github.com/rahul3883/utils/tre
 
 ## Notes
 
-- `utils.log` and `utils.logC` methods uses `util.inspect` method internally,
-so all options passed in `utils.configure` will be considered.
-- `utils.prettyJson` and `utils.prettyJsonC` uses `JSON.stringify` method internally,
-so except `lineChar` and `lineLength`, none of the options will be considered.
+- Options passed in [`utils.configure`](#configure) are global, and will be used
+whenever options are not passed to any methods.
+- Passing options to any method other than [`utils.configure`](#configure) will
+be valid for that function call only.

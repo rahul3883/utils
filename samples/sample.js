@@ -3,8 +3,9 @@ var utils = require('@rahul171/utils');
 utils.configure({
     showHidden: true,
     colors: true,
-    depth: null,
-    breakLength: 50
+    breakLength: 50,
+    char: '=',
+    removeQuotes: false
 });
 
 const obj = {
@@ -18,8 +19,16 @@ const obj = {
     }
 };
 
-utils.log(obj);
-utils.logC(obj, { char: '+' });
-utils.prettyJson(obj);
-utils.prettyJsonC(obj, { char: '=', len: 10 });
+console.log(utils.getLine());
+
 utils.line({ char: '~' });
+
+console.log(utils.getString(obj));
+
+utils.log(obj, { colors: false });
+utils.logC(obj, { char: '+'});
+
+console.log(utils.getJsonString(obj, { indent: '--', removeQuotes: true }));
+
+utils.json(obj);
+utils.jsonC(obj, { singleLineArray: false });
