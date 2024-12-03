@@ -5,14 +5,14 @@ Node.js development utilities for printing data to terminal.
 ## Install
 
 ```shell script
-npm install @rahul171/utils
+npm install @rahul1711/utils
 ```
 
 ## Usage
 
 ### Load the package
 ```javascript
-const utils = require('@rahul171/utils');
+const utils = require('@rahul1711/utils');
 ```
 
 ### Configure

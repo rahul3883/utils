@@ -1,4 +1,4 @@
-const utils = require('@rahul171/utils');
+const utils = require('@rahul1711/utils');
 
 utils.configure({
   showHidden: true,
